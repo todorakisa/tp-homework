@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @decrypt_message.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_rsa_decrypt_message_path(@decrypt_message.rsa, @decrypt_message) %> |
+<%= link_to 'Back', rsa_decrypt_messages_path(@decrypt_message.rsa) %>
