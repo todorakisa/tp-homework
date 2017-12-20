@@ -44,10 +44,10 @@ class RSA
    end
    
    def encrypt message
-      return message.chars.map {|c| c.ord ** @e_ % @n_}
+      return message.chars.map {|c| c.ord ** @e_ % @n_}.join(",")
    end
    
    def decrypt message
-      return (message.map {|c| (c ** @d_ % @n_).chr}).join("")
+      return (message.split(",").map {|c| (c.to_i ** @d_ % @n_).chr}).join("")
    end 
 end
