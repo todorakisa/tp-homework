@@ -2,9 +2,9 @@ require 'prime'
 
 class RSA
    def initialize n, e, d
-     @n_=n
-     @e_=e
-     @d_=d
+     @n_=n.to_i
+     @e_=e.to_i
+     @d_=d.to_i
    end
    
    def n
